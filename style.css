@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-fondo: #E5E5E5;
+    --color-primario:#0A3871;
+    --color-secundario:#D8DFE8;
+    --color--fondo_claro:#FFFFFF;
+    --color-letra-advertencia:#495057;
+    --color-mensaje_salida_primario:#343A40;
+    --color-mensaje_salida_secundario:#495057;
+
+    --fuente-inter:"Inter", sans-serif;
+    font-size: 16px; /* Base font size */
+}
+
+* {
+    padding: 0.625rem; /* 10px */
+    margin: 0.625rem; /* 10px */
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    overflow: auto;
+}
+
+.header{
+    padding-top: 2.5rem; /* 40px */
+    padding-left: 2.5rem; /* 40px */
+}
+
+.pagina__completa{
+    padding: 5rem; /* 80px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja los elementos hacia abajo */
+    height: 62.5rem; /* 1000px */
+}
+
+.entrada {
+    background-color: var(--color-fondo);
+    border: none;
+    width: 36.0625rem; /* 577px */
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; 
+    margin-top: 1.25rem; /* 20px */
+    font-family: var(--fuente-inter);
+    font-size: 2rem; /* 32px */
+    font-weight: 400;
+    color: var(--color-primario);
+}
+
+.entrada::placeholder {
+    color: var(--color-primario);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 2rem; /* 32px */
+}
+
+.mensaje__advertencia{
+    color: var(--color-letra-advertencia);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 0.75rem; /* 12px */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.botones {
+    display: flex;  
+    gap: 1.5rem; /* 24px */
+    align-items: flex-end;
+}
+
+.encriptador{
+    background-color: var(--color-primario);
+    color: var(--color--fondo_claro);
+    border-radius: 1.5rem; /* 24px */
+    border: none;
+    width: 20.5rem; /* 328px */
+    padding: 1.5rem; /* 24px */
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+}
+
+.desencriptador{
+    background-color: transparent;
+    color: var(--color-primario);
+    border-radius: 1.5rem; /* 24px */
+    border: 1px solid var(--color-primario);
+    width: 20.5rem; /* 328px */
+    padding: 1.5rem; /* 24px */
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+}
+
+.container__salida{
+    padding: 10%;
+    background-color: var(--color--fondo_claro);
+    border-radius: 2rem; /* 32px */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25rem; /* 400px */
+    height: 59rem; /* 944px */
+    font-family: var(--fuente-inter);
+    font-weight: 200;
+    font-size: 1.5rem; /* 24px */
+}
+
+.mensaje__salida{
+    margin: 15.1875rem 2rem; /* 243px 32px */
+}
+
+.texto__salida__primario{
+    color: var(--color-mensaje_salida_primario);
+    font-family: var(--fuente-inter);
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+}
+
+.texto__salida__secundario{
+    color: var(--color-mensaje_salida_secundario);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+}
+
+.copiar{
+    background-color: transparent;
+    color: var(--color-primario);
+    border-radius: 1.5rem; /* 24px */
+    border: 1px solid var(--color-primario);
+    width: 20.5rem; /* 328px */
+    padding: 1.5rem; /* 24px */
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    position: relative;
+    top: 26.25rem; /* 420px */
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .pagina__completa{
+        flex-direction: column;
+    }
+    .figura{
+        display: none;
+    }
+    .container__salida{
+        width: 40rem;
+        height: 10rem;
+    }
+}
+@media (max-width: 767px){
+    .pagina__completa{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .entrada{
+        width: 20rem;
+        justify-content: center;
+        
+    }
+    .mensaje__advertencia{
+        justify-content: center;
+    }
+    .botones{
+        flex-direction: column;
+        align-items: center;
+    }
+    .figura{
+        display: none;
+    }
+    .container__salida{
+        width: 20rem;
+        height: 15rem;
+    }
+}
